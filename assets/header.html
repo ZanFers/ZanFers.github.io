@@ -1,0 +1,25 @@
+<nav class="navbar" id="navbar">
+  <p class="logo"><a href="../index.html">&lt;ŽF&#47;&gt;</a></p>
+
+  <button class="hamburger" id="hamburger">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <ul class="nav-list" id="nav-list">
+    <li class="nav-item"><a href="journey.html">My Journey</a></li>
+
+    <li class="nav-item"><a href="design.html">Graphic Design</a></li>
+
+    <li class="nav-item"><a href="webdev.html">Web Development</a></li>
+  </ul>
+</nav>
+
+<!-- Mobile hamburger menu toggle script (problems adding it to seperate JS file turns into NULL) -->
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navList = document.getElementById('nav-list');
+
+  hamburger.addEventListener('click', () => {
+    navList.classList.toggle('show');
+  });
+</script>
