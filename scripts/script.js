@@ -27,3 +27,55 @@ window.addEventListener("load", function () {
   tw.container = document.getElementById(tw.container);
   tw.draw();
 });
+
+/* -- Timeline scroll reveal effect --*/
+$(function () {
+
+  window.sr = new ScrollReveal();
+
+  if ($(window).width() < 768) {
+
+      if ($('.container').hasClass('fadeInLeft')) {
+          $('.container').removeClass('fadeInLeft').addClass('fadeInRight');
+      }
+
+      sr.reveal('.fadeInRight', {
+          origin: 'right',
+          distance: '300px',
+          easing: 'ease-in-out',
+          duration: 800,
+      });
+
+  } else {
+
+      sr.reveal('.fadeInLeft', {
+          origin: 'left',
+          distance: '300px',
+          easing: 'ease-in-out',
+          duration: 800,
+      });
+
+      sr.reveal('.fadeInRight', {
+          origin: 'right',
+          distance: '300px',
+          easing: 'ease-in-out',
+          duration: 800,
+      });
+
+  }
+
+  sr.reveal('.fadeInLeft', {
+      origin: 'left',
+      distance: '300px',
+      easing: 'ease-in-out',
+      duration: 800,
+  });
+
+  sr.reveal('.fadeInRight', {
+      origin: 'right',
+      distance: '300px',
+      easing: 'ease-in-out',
+      duration: 800,
+  });
+
+});

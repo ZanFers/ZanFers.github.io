@@ -1,0 +1,207 @@
+/* Font impport from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700&display=swap");
+
+/* Global settings and properties for every page */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Source Code Pro", monospace;
+    font-size: 100%;
+}
+
+ul,
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+    padding: 0;
+}
+
+/* Header and footer properties for every page */
+
+/* -- Navigation bar -- */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.logo {
+    padding: 0.5em 0;
+    margin-left: 2em;
+    font-size: 130%;
+    letter-spacing: 0.2em;
+}
+
+.logo:hover {
+    font-weight: 600;
+}
+
+.slash {
+    color: #ee6557;
+}
+
+.nav-list {
+    display: flex;
+    font-size: 110%;
+    max-width: 100%;
+}
+
+.nav-list>li {
+    margin-right: 2em;
+}
+
+.nav-item {
+    position: relative;
+    padding: 2px;
+}
+
+.nav-item:hover {
+    color: #4c4c4c;
+}
+
+.nav-item:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    top: 100%;
+    background-color: #ee6557;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Menu button for mobile */
+.hamburger {
+    display: none;
+    background-color: transparent;
+    border: 0;
+    font-size: 120%;
+    cursor: pointer;
+}
+
+.hamburger:hover {
+    color: #4C4C4C;
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 750px) {
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-list.show {
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255);
+        font-size: 110%;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+        padding-bottom: 0.65em;
+    }
+
+    .nav-list>li {
+        margin: 0;
+    }
+
+    .hamburger {
+        display: block;
+        margin-right: 2em;
+    }
+}
+
+/* -- Introductory section --*/
+.introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 17em;
+    max-width: 100%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    background-color: #f8f8ff;
+    padding: 2.938em 1.5em 0em 1.5em;
+}
+
+h1 {
+    padding-bottom: 20px;
+    font-size: 200%;
+}
+
+.introduction>p,
+span {
+    font-size: 110%;
+}
+
+.hypen {
+    color: #ee6557;
+}
+
+/* Blinking cursor of the typewriter effect */
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#blinking-cursor {
+    animation: blink 0.8s infinite;
+    color: #ee6557;
+}
+
+/* -- Footer section -- */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.5);
+    /* Properties to keep footer at the bottom */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5em;
+}
+
+/* Properties to keep footer at the bottom */
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Footer height */
+.content-wrapper {
+    padding-bottom: 2.5rem;
+}
