@@ -196,6 +196,13 @@ footer {
     height: 2.5em;
 }
 
+/* Mobile friendly footer */
+@media only screen and (max-width: 420px) {
+    footer {
+        height: 3em;
+    }
+}
+
 .footer-social {
     width: 100%;
     display: flex;
@@ -232,12 +239,13 @@ footer {
     margin-left: auto;
     padding: 10px 5px 10px 2em;
 }
+.copyright span {
+    padding: 5px;
+}
 
 .copyright-c {
     color: #ee6557;
 }
-
-@media only screen and (max-width: 420px) {}
 
 /* Properties to keep footer at the bottom */
 .page-container {
