@@ -8,10 +8,13 @@
     padding: 0;
 }
 
-html {
+html,
+body {
     scroll-behavior: smooth;
     font-family: "Source Code Pro", monospace;
     font-size: 100%;
+    /* Fix for header on chrome/opera (header created a lot of overflow whitespace) */
+    overflow-x: hidden;
 }
 
 ul,
@@ -154,13 +157,14 @@ h1 {
     font-size: 200%;
 }
 
-.introduction>p,
-span {
+.introduction p,
+.introduction span {
     font-size: 110%;
 }
 
 .hypen {
     color: #ee6557;
+    font-weight: bold;
 }
 
 /* Blinking cursor of the typewriter effect */
@@ -182,10 +186,7 @@ span {
 /* -- Footer section -- */
 footer {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    text-align: center;
-    align-items: center;
     background-color: #fff;
     box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.5);
     /* Properties to keep footer at the bottom */
@@ -194,6 +195,49 @@ footer {
     width: 100%;
     height: 2.5em;
 }
+
+.footer-social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: 2em;
+}
+
+.footer-item-first {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 5px 5px;
+    color:  #4C4C4C;
+}
+
+.footer-item-first:hover {
+    color: #ee6557;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    color: #4C4C4C;
+}
+
+.footer-item:hover {
+    color: #ee6557;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-left: 2em;
+}
+
+.copyright-c {
+    color: #ee6557;
+}
+
+@media only screen and (max-width: 420px) {}
 
 /* Properties to keep footer at the bottom */
 .page-container {

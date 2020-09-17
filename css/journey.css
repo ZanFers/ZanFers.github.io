@@ -27,16 +27,16 @@
 
 /* Circles along the timeline line */
 .circle {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     background-color: #fff;
     border: 4px solid #ee6557;
-	border-radius: 50%;
+    border-radius: 50%;
     position: absolute;
     left: 50%;
-	margin-top: 25px;
-    margin-left: -15px;
-    z-index:1;
+    margin-top: 37px;
+    margin-left: -17px;
+    z-index: 1;
 }
 
 /* Left container placement */
@@ -49,7 +49,7 @@
     content: " ";
     height: 0;
     position: absolute;
-    top: 30px;
+    top: 45px;
     width: 0;
     z-index: 1;
     right: 40px;
@@ -68,7 +68,7 @@
     content: " ";
     height: 0;
     position: absolute;
-    top: 30px;
+    top: 45px;
     width: 0;
     z-index: 1;
     left: 40px;
@@ -81,7 +81,42 @@
 .content {
     padding: 20px 30px;
     background-color: #f8f8ff;
-    position: relative;
     border-radius: 6px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Icons inside the content */
+.content-icon {
+    position: relative;
+    left: 85%;
+    padding: 2px;
+}
+
+/* Responsive timeline for smaller screens */
+@media only screen and (max-width: 700px) {
+
+    .timeline:after {
+        left: 30px;
+    }
+
+    .circle {
+        left: 30px;
+    }
+
+    .left {
+        left: 50%;
+    }
+
+    .container {
+        width: 100%;
+        position: initial;
+        margin-left: 20px;
+    }
+
+    .container::before {
+        left: 39px;
+        border: medium solid #4C4C4C;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #4C4C4C transparent transparent;
+    }
 }
