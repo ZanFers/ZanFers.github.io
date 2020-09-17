@@ -230,7 +230,7 @@ footer {
     display: flex;
     align-items: center;
     margin-left: auto;
-    padding-left: 2em;
+    padding: 10px 5px 10px 2em;
 }
 
 .copyright-c {
