@@ -75,6 +75,7 @@ a {
     color: #4c4c4c;
 }
 
+/* Hover underline effect */
 .nav-item:before {
     content: "";
     position: absolute;
@@ -237,7 +238,6 @@ footer {
     display: flex;
     align-items: center;
     margin-left: auto;
-    padding: 10px 5px 10px 2em;
 }
 .copyright span {
     padding: 5px;
