@@ -3,6 +3,9 @@
     position: relative;
     max-width: 70em;
     margin: 0 auto;
+    /* Transition animation on page load */
+    animation: transitionIn 1.5s;
+    z-index: -1;
 }
 
 /* The straight line */

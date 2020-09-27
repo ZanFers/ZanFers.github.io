@@ -39,6 +39,21 @@ a {
     width: 100%;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
     z-index: 2;
+    /* Transition animation on page load */
+    animation: transitionIn 0.5s;
+}
+
+/* Transition animation on page load */
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .logo {
@@ -151,6 +166,8 @@ a {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
     background-color: #f8f8ff;
     padding: 2.938em 1.5em 0em 1.5em;
+    /* Transition animation on page load */
+    animation: transitionIn 1s;
 }
 
 h1 {
@@ -187,7 +204,6 @@ h1 {
 /* -- Footer section -- */
 footer {
     display: flex;
-    justify-content: center;
     background-color: #fff;
     box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.5);
     /* Properties to keep footer at the bottom */
@@ -195,6 +211,8 @@ footer {
     bottom: 0;
     width: 100%;
     height: 2.5em;
+    /* Transition animation on page load */
+    animation: transitionIn 2s;
 }
 
 /* Mobile friendly footer */
@@ -207,43 +225,37 @@ footer {
 .footer-social {
     width: 100%;
     display: flex;
-    justify-content: center;
-    margin-right: 2em;
-}
-
-.footer-item-first {
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-left: auto;
-    padding: 5px 5px;
-    color:  #4C4C4C;
+    padding: 0 2em;
 }
 
-.footer-item-first:hover {
+/* Invisible div for centering footer (find better solution!) */
+.footer-placeholder {
+    width: 104px;
+}
+
+@media only screen and (max-width: 700px) {
+    .footer-placeholder {
+        width: 0;
+        position: absolute;
+    }
+}
+
+.copyright-c {
     color: #ee6557;
 }
 
-.footer-item {
+.footer-items {
     display: flex;
-    align-items: center;
+}
+
+.footer-icon {
     padding: 5px 5px;
     color: #4C4C4C;
 }
 
-.footer-item:hover {
-    color: #ee6557;
-}
-
-.copyright {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-}
-.copyright span {
-    padding: 5px;
-}
-
-.copyright-c {
+.footer-icon:hover {
     color: #ee6557;
 }
 
