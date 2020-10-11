@@ -1,3 +1,4 @@
+/*Web Projects page CSS */
 .webdev {
     -webkit-animation: transitionIn 1.5s;
     animation: transitionIn 1.5s;
@@ -7,25 +8,13 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.left-flex {
-    margin-left: 1em;
-}
-
-.right-flex {
-    margin-right: 1em;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-flow: wrap;
 }
 
 /* Mobile friendly flex container */
-@media screen and (max-width: 1350px) {
-    .flex-container {
-        width: 100%;
-    }
-}
-
 @media screen and (max-width: 1000px) {
     .flex-container {
         -webkit-box-orient: vertical;
@@ -37,10 +26,26 @@
 
 .flex-item {
     position: relative;
-    margin: 2em 1em 2em 1em;
     -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
     overflow: hidden;
+    margin: 1em;
+    flex-basis: calc(40% - 1em); /* Width - Margin */
+}
+
+@media screen and (max-width: 1500px) {
+    .flex-item {
+        flex-basis: 80%;
+    }
+}
+
+.flex-item:hover {
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .flex-image {
@@ -58,7 +63,7 @@
     bottom: 100%;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     overflow: hidden;
     width: 100%;
     height: 0;
@@ -74,8 +79,7 @@
 
 .overlay-text {
     color: white;
-    font-size: 130%;
-    font-weight: 800;
+    font-size: 120%;
     position: absolute;
     text-align: center;
     top: 50%;
@@ -83,17 +87,5 @@
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-}
-
-.project-link:hover .flex-image {
-    -webkit-transform: scale(1.25);
-    /* Safari and Chrome */
-    /* Firefox */
-    -ms-transform: scale(1.25);
-    /* IE 9 */
-    /* Opera */
-    transform: scale(1.25);
-    -webkit-transform-origin: top;
-    -ms-transform-origin: top;
-    transform-origin: top;
+    text-shadow: 0 1px 0 black;
 }

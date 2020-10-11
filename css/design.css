@@ -1,3 +1,4 @@
+/* Graphic Design page CSS */
 .design {
     padding: 0 1em;
     /* Transition animation on page load */
@@ -25,23 +26,13 @@
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.grid-image {
-    height: 300px;
-}
-
-/* Content inside grid-item */
-.grid-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    -webkit-transition: all 0.4s ease-in-out 0s;
-    -o-transition: all 0.4s ease-in-out 0s;
-    transition: all 0.4s ease-in-out 0s;
-    background: rgba(0, 0, 0, 0.5);
-    cursor: none;
+.grid-item:hover {
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .grid-item:hover .design-item {
@@ -50,6 +41,28 @@
 
 .grid-item:hover .grid-overlay {
     opacity: 1;
+    bottom: 0;
+    height: 100%;
+}
+
+.grid-image {
+    height: 300px;
+}
+
+/* Content inside grid-item */
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 100%;
+    height: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: none;
 }
 
 .grid-content {
@@ -62,12 +75,12 @@
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 110%;
-    font-weight: bold;
 }
 
 .grid-title {
     position: relative;
     padding-bottom: 0.5em;
+    text-shadow: 0 1px 0 black;
 }
 
 .grid-title::before {
