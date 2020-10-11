@@ -17,12 +17,11 @@
     animation: transitionIn 1.5s;
 }
 
-.about > p::first-letter {
+.about>p::first-letter {
     float: left;
     font-size: 300%;
     color: #ee6557;
-    padding-top: 0.3rem;
-    margin: 0 .2rem 0 0;
+    margin: -0.2em 0.1em -0.4em 0;
 }
 
 .portrait {
