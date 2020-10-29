@@ -1,0 +1,380 @@
+/* Font impport from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700&display=swap");
+
+/* Variables */
+$main-red: #ee6557;
+$main-gray: #4c4c4c;
+
+/* Global settings and properties for every page */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mouse selection */
+::-moz-selection {
+  background-color: $main-red;
+  color: #fff;
+}
+
+::selection {
+  background-color: $main-red;
+  color: #fff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px $main-gray;
+  box-shadow: inset 0 0 5px $main-gray;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $main-gray;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $main-red;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: "Source Code Pro", monospace;
+  font-size: 100%;
+  /* Fix for header on chrome/opera (header created a lot of overflow whitespace) */
+  overflow-x: hidden;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+  padding: 0;
+}
+
+/* Header and footer properties for every page */
+
+/* -- Navigation bar -- */
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: fixed;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  /* Transition animation on page load */
+  -webkit-animation: transitionIn 0.5s;
+  animation: transitionIn 0.5s;
+}
+
+/* Transition animation on page load */
+@-webkit-keyframes transitionIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  padding: 0.5em 0;
+  margin-left: 2em;
+  font-size: 130%;
+  letter-spacing: 0.2em;
+}
+
+.logo:hover {
+  font-weight: 600;
+}
+
+.slash {
+  color: $main-red;
+}
+
+.nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 110%;
+  max-width: 100%;
+}
+
+.nav-list > li {
+  margin-right: 2em;
+}
+
+.nav-item {
+  position: relative;
+  padding: 2px;
+}
+
+.nav-item:hover {
+  color: $main-gray;
+}
+
+/* Hover underline effect */
+.nav-item:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  top: 100%;
+  background-color: $main-red;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* Menu button for mobile */
+.hamburger {
+  display: none;
+  background-color: transparent;
+  border: 0;
+  font-size: 120%;
+  cursor: pointer;
+}
+
+.hamburger:hover {
+  color: $main-gray;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 750px) {
+  .nav-list {
+    max-height: 0;
+    opacity: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-list.show {
+    opacity: 1;
+    max-height: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #fff;
+    font-size: 110%;
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    padding-bottom: 0.65em;
+    -webkit-transition: font-size 0.3s, margin 0.3s, padding 0.3s,
+      opacity 0.3s 0.25s;
+    -o-transition: font-size 0.3s, margin 0.3s, padding 0.3s, opacity 0.3s 0.25s;
+    transition: font-size 0.3s, margin 0.3s, padding 0.3s, opacity 0.3s 0.25s;
+  }
+
+  .nav-list > li {
+    margin: 0;
+  }
+
+  .hamburger {
+    display: block;
+    margin-right: 2em;
+  }
+}
+
+/* -- Introductory section --*/
+.introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  height: 17em;
+  max-width: 100%;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  background-color: #f8f8ff;
+  padding: 2.938em 1.5em 0em 1.5em;
+  /* Transition animation on page load */
+  -webkit-animation: transitionIn 1s;
+  animation: transitionIn 1s;
+}
+
+h1 {
+  padding-bottom: 20px;
+  font-size: 200%;
+}
+
+.introduction p,
+.introduction span {
+  font-size: 110%;
+}
+
+/* Blinking cursor of the typewriter effect */
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#blinking-cursor {
+  -webkit-animation: blink 0.8s infinite;
+  animation: blink 0.8s infinite;
+  color: #ee6557;
+}
+
+/* -- Footer section -- */
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  -webkit-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.5);
+  /* Properties to keep footer at the bottom */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5em;
+  /* Transition animation on page load */
+  -webkit-animation: transitionIn 2s;
+  animation: transitionIn 2s;
+}
+
+/* Mobile friendly footer */
+@media screen and (max-width: 420px) {
+  footer {
+    height: 3em;
+  }
+}
+
+.footer-social {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 2em;
+}
+
+/* Invisible div for centering footer (find better solution!) */
+.footer-placeholder {
+  width: 104px;
+}
+
+@media screen and (max-width: 700px) {
+  .footer-placeholder {
+    width: 0;
+    position: absolute;
+  }
+}
+
+.copyright-c {
+  color: $main-red;
+}
+
+.footer-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-icon {
+  padding: 5px 5px;
+  color: $main-gray;
+}
+
+.footer-icon:hover {
+  color: $main-red;
+}
+
+/* Properties to keep footer at the bottom */
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Footer height */
+.content-wrapper {
+  padding-bottom: 2.5rem;
+}
