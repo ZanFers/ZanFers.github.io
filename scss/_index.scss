@@ -31,6 +31,7 @@ $main-red: #ee6557;
 .portrait {
   width: 150px;
   border: 2px solid #fff;
+  -webkit-filter: grayscale(10%);
   filter: grayscale(10%); 
   border-radius: 50%;
   -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2),
