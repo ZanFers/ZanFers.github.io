@@ -1,88 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Welcome to my portfolio website. Here you can find out a little something about me and what I do."
+    />
+    <meta name="keywords" content="Portfolio, About, Portrait" />
+    <meta name="author" content="Žan Ferš" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+    <title>Portfolio - Žan Ferš</title>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
-  <title> Portfolio - Žan Ferš </title>
-</head>
+  <body>
+    <div class="page-container">
+      <div class="content-wrapper">
+        <!-- Navigation bar -->
+        <div id="header"></div>
 
-<body>
-  <div class="page-container">
-    <div class="content-wrapper">
+        <!-- Introductory section -->
+        <section class="introduction">
+          <h1>Žan Ferš</h1>
+          <p>Junior Front End Developer & Aspiring Graphic Designer</p>
+          <div id="typewriterContainer">
+            <span id="typewriter"></span><span id="blinking-cursor">|</span>
+          </div>
+        </section>
 
-      <!-- Navigation bar -->
-      <div id="header"></div>
+        <!-- About section with left and right div -->
+        <section class="main">
+          <div class="contact">
+            <div class="image">
+              <img src="images/portrait.jpg" class="portrait" alt="Portrait" />
+            </div>
 
-      <!-- Introductory section -->
-      <section class="introduction">
-        <h1>Žan Ferš</h1>
-        <p>Junior Front End Developer & Aspiring Graphic Designer</p>
-        <div id="typewriterContainer">
-          <span id="typewriter"></span><span id="blinking-cursor">|</span>
-        </div>
-      </section>
+            <ul class="social">
+              <li>
+                <h2>Contact</h2>
+              </li>
 
-      <!-- About section with left and right div -->
-      <section class="main">
+              <li class="social-item">
+                <a
+                  href="https://www.instagram.com/fersek729/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fa fa-instagram index-icon" aria-hidden="true"></i>
+                  <span>Instagram</span>
+                </a>
+              </li>
 
-        <div class="contact">
+              <li class="social-item">
+                <a
+                  href="https://codepen.io/fersek"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fa fa-codepen index-icon" aria-hidden="true"></i>
+                  <span>CodePen</span>
+                </a>
+              </li>
 
-          <div class="image">
-            <img src="images/portrait.jpg" class="portrait" alt="Portrait">
+              <li class="social-item">
+                <a
+                  href="https://www.freecodecamp.org/fersek"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i
+                    class="fa fa-free-code-camp index-icon"
+                    aria-hidden="true"
+                  ></i>
+                  <span>FreeCodeCamp</span>
+                </a>
+              </li>
+
+              <li class="social-item">
+                <a href="mailto:fersek@protonmail.com">
+                  <i class="fa fa-envelope-o index-icon" aria-hidden="true"></i>
+                  <span>Email</span>
+                </a>
+              </li>
+            </ul>
           </div>
 
-          <ul class="social">
-            <li>
-              <h2>Contact</h2>
-            </li>
-            
-            <li class="social-item"><a href="https://www.instagram.com/fersek729/" target="_blank">
-                <i class="fa fa-instagram index-icon" aria-hidden="true"></i>
-                <span>Instagram</span>
-              </a>
-            </li>
+          <div class="about">
+            <h2>About me</h2>
+            <p>
+              <span class="first-letter">I</span> am an ambitious student with
+              an inexhaustible curiosity and an adventurous spirit. My free time
+              is filled with all sorts of hobbies and interests such as
+              exploring the unknown and novel while improving every day on a
+              physical and mental level. Currently I am working on mastering
+              HTML, CSS and JavaScript while keeping up with my graphic design
+              skills.
+            </p>
+          </div>
+        </section>
 
-            <li class="social-item"><a href="https://codepen.io/fersek" target="_blank">
-                <i class="fa fa-codepen index-icon" aria-hidden="true"></i>
-                <span>CodePen</span>
-              </a>
-            </li>
-
-            <li class="social-item"><a href="https://www.freecodecamp.org/fersek" target="_blank">
-                <i class="fa fa-free-code-camp index-icon" aria-hidden="true"></i>
-                <span>FreeCodeCamp</span>
-              </a>
-            </li>
-
-            <li class="social-item"><a href="mailto:fersek@protonmail.com">
-                <i class="fa fa-envelope-o index-icon" aria-hidden="true"></i>
-                <span>Email</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="about">
-          <h2> About me </h2>
-          <p><span class="first-letter">I</span> am an ambitious student with an inexhaustible curiosity and an adventurous spirit. My free time is filled
-            with all sorts of hobbies and interests such as exploring the unknown and novel while improving every day on
-            a physical and mental level. Currently I am working on mastering HTML, CSS and JavaScript while keeping up
-            with my graphic design skills.</p>
-        </div>
-      </section>
-
-      <!-- Footer section -->
-      <div id="footer"></div>
-
+        <!-- Footer section -->
+        <div id="footer"></div>
+      </div>
     </div>
-  </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="scripts/script.js"></script>
-  <script src="https://kit.fontawesome.com/0276d473f7.js" crossorigin="anonymous"></script>
-</body>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0276d473f7.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

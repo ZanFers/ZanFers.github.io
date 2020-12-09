@@ -20,7 +20,7 @@ var tw = {
     if (tw.pointer < tw.text.length) {
       tw.timer = setTimeout(tw.draw, tw.delay);
     }
-  }
+  },
 };
 
 window.addEventListener("load", function () {
@@ -30,52 +30,46 @@ window.addEventListener("load", function () {
 
 /* -- Timeline scroll reveal effect --*/
 $(function () {
-
   window.sr = new ScrollReveal();
 
   if ($(window).width() < 768) {
-
-    if ($('.container').hasClass('fadeInLeft')) {
-      $('.container').removeClass('fadeInLeft').addClass('fadeInRight');
+    if ($(".container").hasClass("fadeInLeft")) {
+      $(".container").removeClass("fadeInLeft").addClass("fadeInRight");
     }
 
-    sr.reveal('.fadeInRight', {
-      origin: 'right',
-      distance: '300px',
-      easing: 'ease-in-out',
+    sr.reveal(".fadeInRight", {
+      origin: "right",
+      distance: "300px",
+      easing: "ease-in-out",
       duration: 800,
     });
-
   } else {
-
-    sr.reveal('.fadeInLeft', {
-      origin: 'left',
-      distance: '300px',
-      easing: 'ease-in-out',
+    sr.reveal(".fadeInLeft", {
+      origin: "left",
+      distance: "300px",
+      easing: "ease-in-out",
       duration: 800,
     });
 
-    sr.reveal('.fadeInRight', {
-      origin: 'right',
-      distance: '300px',
-      easing: 'ease-in-out',
+    sr.reveal(".fadeInRight", {
+      origin: "right",
+      distance: "300px",
+      easing: "ease-in-out",
       duration: 800,
     });
-
   }
 
-  sr.reveal('.fadeInLeft', {
-    origin: 'left',
-    distance: '300px',
-    easing: 'ease-in-out',
+  sr.reveal(".fadeInLeft", {
+    origin: "left",
+    distance: "300px",
+    easing: "ease-in-out",
     duration: 800,
   });
 
-  sr.reveal('.fadeInRight', {
-    origin: 'right',
-    distance: '300px',
-    easing: 'ease-in-out',
+  sr.reveal(".fadeInRight", {
+    origin: "right",
+    distance: "300px",
+    easing: "ease-in-out",
     duration: 800,
   });
-
 });

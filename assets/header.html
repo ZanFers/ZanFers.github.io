@@ -1,7 +1,9 @@
 <nav class="navbar" id="navbar">
-  <p class="logo"><a href="../index.html">&lt;ŽF<span class="slash">&#47;</span>&gt;</a></p>
+  <p class="logo">
+    <a href="../index.html">&lt;ŽF<span class="slash">&#47;</span>&gt;</a>
+  </p>
 
-  <button class="hamburger" id="hamburger">
+  <button class="hamburger" id="hamburger" aria-label="Open Menu">
     <i class="fa fa-bars"></i>
   </button>
 
@@ -16,10 +18,10 @@
 
 <!-- Mobile hamburger menu toggle script (problems adding it to seperate JS file turns into NULL) -->
 <script>
-  const hamburger = document.getElementById('hamburger');
-  const navList = document.getElementById('nav-list');
+  const hamburger = document.getElementById("hamburger");
+  const navList = document.getElementById("nav-list");
 
-  hamburger.addEventListener('click', () => {
-    navList.classList.toggle('show');
+  hamburger.addEventListener("click", () => {
+    navList.classList.toggle("show");
   });
 </script>
