@@ -31,12 +31,11 @@ $main-red: #ee6557;
 .portrait {
   width: 150px;
   border: 2px solid #fff;
+  filter: grayscale(10%); 
   border-radius: 50%;
-  -webkit-filter: grayscale(50%);
-  filter: grayscale(50%);
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2),
+    0 4px 15px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
 }
 
 .contact {
