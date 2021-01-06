@@ -14,7 +14,6 @@ var tw = {
   pointer: 0, // Current text position
   draw: function () {
     // tw.draw() : typewriter effect
-
     tw.pointer++;
     tw.container.innerHTML = tw.text.substring(0, tw.pointer);
     if (tw.pointer < tw.text.length) {
